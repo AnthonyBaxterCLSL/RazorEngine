@@ -78,6 +78,11 @@
         public ISet<string> Namespaces { get; private set; }
 
         /// <summary>
+        /// Gets the assemblies to exclude when compiling templates
+        /// </summary>
+        public ISet<string> ExcludeAssemblies { get; private set; } 
+
+        /// <summary>
         /// Gets the template resolver.
         /// </summary>
         public ITemplateResolver Resolver { get; private set; }

@@ -60,6 +60,11 @@
         ISet<string> Namespaces { get; }
 
         /// <summary>
+        /// Gets the assemblies to exlude when compiling a template
+        /// </summary>
+        ISet<string> ExcludeAssemblies { get; } 
+            
+        /// <summary>
         /// Gets the template resolver.
         /// </summary>
         ITemplateResolver Resolver { get; }

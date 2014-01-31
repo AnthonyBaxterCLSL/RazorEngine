@@ -23,14 +23,14 @@
             CompilerServiceFactory = new DefaultCompilerServiceFactory();
             EncodedStringFactory = new HtmlEncodedStringFactory();
             CodeInspectors = new List<ICodeInspector>();
-
+            
             Namespaces = new HashSet<string>
                              {
                                  "System", 
                                  "System.Collections.Generic", 
                                  "System.Linq"
                              };
-
+            ExcludeAssemblies = new HashSet<string>();
             var config = RazorEngineConfigurationSection.GetConfiguration();
             Language = (config == null)
                            ? Language.CSharp
@@ -88,6 +88,11 @@
         /// Gets or sets the collection of namespaces.
         /// </summary>
         public ISet<string> Namespaces { get; set; }
+
+        /// <summary>
+        /// Gets or sets the assemblies to exlcude when compiling templates
+        /// </summary>
+        public ISet<string> ExcludeAssemblies { get; set; } 
 
         /// <summary>
         /// Gets or sets the template resolver.

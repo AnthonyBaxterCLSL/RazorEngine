@@ -16,6 +16,7 @@
         {
             ClassName = CompilerServicesUtility.GenerateClassName();
             Namespaces = new HashSet<string>();
+            ExcludeAssemblies = new HashSet<string>();
         }
         #endregion
 
@@ -34,6 +35,11 @@
         /// Gets the set of namespace imports.
         /// </summary>
         public ISet<string> Namespaces { get; private set; }
+
+        /// <summary>
+        /// Gets the assemblies to exclude when compiling the template
+        /// </summary>
+        public ISet<string> ExcludeAssemblies { get; private set; } 
 
         /// <summary>
         /// Gets or sets the template content.

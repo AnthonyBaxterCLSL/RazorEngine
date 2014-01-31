@@ -266,6 +266,9 @@ namespace RazorEngine.Templating
             foreach (string ns in _config.Namespaces)
                 context.Namespaces.Add(ns);
 
+            foreach (var ass in _config.ExcludeAssemblies)
+                context.ExcludeAssemblies.Add(ass);
+
             var service = _config
                 .CompilerServiceFactory
                 .CreateCompilerService(_config.Language);

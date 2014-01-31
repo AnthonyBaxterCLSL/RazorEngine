@@ -105,6 +105,14 @@
         }
 
         /// <summary>
+        /// Gets or sets the assemblies to exclude when compiling templates
+        /// </summary>
+        public ISet<string> ExcludeAssemblies
+        {
+            get { return _innerConfig.ExcludeAssemblies; }
+        } 
+
+        /// <summary>
         /// Gets the resolver.
         /// </summary>
         public ITemplateResolver Resolver
